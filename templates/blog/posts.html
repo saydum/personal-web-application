@@ -1,0 +1,51 @@
+{% extends 'base.html' %} 
+
+{% block title %} Posts {% endblock %}
+
+{% block body %}
+<style>
+    header {
+        background-color: #198754;
+    }
+    .post {
+        margin-top: 70px;
+    }
+    .content {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+</style>
+
+    <section id="blog" class="blog-mf sect-pt4 route">
+        <div class="container">
+            <div class="row justify-content-center py-5">
+
+                {% for post in post_list %}
+                    <a href="posts/{{ post.id }}">
+                        <div class="col-md-4">
+                            <div class="card card-blog">
+                                <img src="{{ post.image.url }}" class="card-img-top img-fluid" alt="{{ post.title }}">
+                                <div class="card-body">
+                                    <h3 class="card-title">
+                                        {{ post.title }}
+                                    </h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="post-author">
+                                        <a href="#">
+                                            <span class="author">Saydum</span>
+                                        </a>
+                                    </div>
+                                    <div class="post-date">
+                                        <span class="bi bi-clock"></span> data
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+{% endblock %}

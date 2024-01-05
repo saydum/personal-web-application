@@ -1,0 +1,34 @@
+{% extends 'base.html' %} 
+
+{% block title %} Post detaile {% endblock %}
+
+{% block body %} 
+<style>
+    header {
+        background-color: #198754;
+    }
+    .post {
+        margin-top: 70px;
+    }
+    .content {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+</style>
+<section class="content">
+    <div class="post-box post">
+        <h3 class="card-title text-center py-2">
+            {{ post.title }}
+        </h3>
+        <hr>
+        <div class="justify-content-center d-flex">
+            <img src="{{ post.image.url }}" width="360" height="240" class="rounded img-fluid" alt="{{ post.title }}">
+        </div>
+        <p>
+            {{ post.content }}
+        </p>
+       <small>{{ post.created_at }}</small>
+    </div>
+
+</section>
+{% endblock %}

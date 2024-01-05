@@ -1,0 +1,72 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block title %} Index {% endblock %}
+
+{% block body%}
+    <style>
+        i {
+            font-size: 38px;
+            color: white;
+        }
+
+        i:hover {
+            color: #198754;
+        }
+        #hero {
+            background: url("{% static 'blog/img/bg.jpg' %}") no-repeat center
+        }
+    </style>
+    <div
+        id="hero"
+        class="hero route bg-image"
+    >
+        <div class="overlay-itro"></div>
+        <div class="hero-content display-table">
+            <div class="table-cell">
+                <div class="container">
+                    <p class="hero-subtitle">
+                        <span
+                            class="typed"
+                            data-typed-items="Hello!, My name is Saydum., I'm backend developer."
+                        >
+                        </span>
+                    </p>
+                    <div class="mb-4">
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a
+                                    href="https://github.com/saydum/"
+                                    class="nav-link"
+                                    target="_blank"
+                                >
+                                    <i class="bi bi-github"></i>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a
+                                    href="https://t.me/saydum47"
+                                    class="nav-link"
+                                    target="_blank"
+                                >
+                                    <i class="bi bi-telegram"></i>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a
+                                    href="https://www.youtube.com/channel/UCGgou2mPkfTyv9SULB2nckg"
+                                    class="nav-link"
+                                    target="_blank"
+                                >
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
